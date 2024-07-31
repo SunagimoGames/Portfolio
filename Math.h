@@ -6,8 +6,6 @@
 #include <iostream>
 #include <stdexcept>
 
-//‰EèŒn‚Ì—ñ—Dæ
-
 const float Pi = 3.1415926535f;
 
 inline float DegToRad(float deg) { return deg * Pi / 180.0f; }
@@ -25,7 +23,7 @@ public:
 	Vec2(float num):x(num), y(num) {}
 
 /***********************************************************************************
-ƒQƒbƒ^[ƒZƒbƒ^[ƒAƒWƒƒƒXƒ^[
+ã‚²ãƒƒã‚¿ãƒ¼ã‚»ãƒƒã‚¿ãƒ¼ã‚¢ã‚¸ãƒ£ã‚¹ã‚¿ãƒ¼
 ***********************************************************************************/
 
 	inline float GetX() const { return x; }
@@ -38,7 +36,7 @@ public:
 	static Vec2 Zero() { return Vec2(0.0f, 0.0f); }
 
 /***********************************************************************************
-ŠÖ”
+é–¢æ•°
 ***********************************************************************************/
 
 	static float Length(float x, float y) { return sqrtf(x * x + y * y); }
@@ -73,7 +71,7 @@ public:
 	}
 
 /***********************************************************************************
-‰‰Zq(‘ã“ü‰‰Zq‚Íƒƒ“ƒo“à‚ÅÀ‘•‚µ,ƒƒ“ƒoŠO‚ÌZp‰‰Zq(“ñ€)‚Åg—p‚µƒR[ƒh‚Ìd•¡‚ğ”ğ‚¯‚é)
+æ¼”ç®—å­(ä»£å…¥æ¼”ç®—å­ã¯ãƒ¡ãƒ³ãƒå†…ã§å®Ÿè£…ã—,ãƒ¡ãƒ³ãƒå¤–ã®ç®—è¡“æ¼”ç®—å­(äºŒé …)ã§ä½¿ç”¨ã—ã‚³ãƒ¼ãƒ‰ã®é‡è¤‡ã‚’é¿ã‘ã‚‹)
 ***********************************************************************************/
 
 	inline Vec2& operator= (const Vec2& rhs)
@@ -125,8 +123,8 @@ public:
 private:
 	float x, y;
 };
-//‰‰Zq
-//inline‚ÍŠeƒRƒ“ƒpƒCƒ‹’PˆÊ‚Å“Æ—§‚µ‚Äˆµ‚í‚ê‚é‚½‚ßƒŠƒ“ƒJ‚ªd•¡‚Æ‚İ‚È‚·‚±‚Æ‚Í‚È‚¢
+//æ¼”ç®—å­
+//inlineã¯å„ã‚³ãƒ³ãƒ‘ã‚¤ãƒ«å˜ä½ã§ç‹¬ç«‹ã—ã¦æ‰±ã‚ã‚Œã‚‹ãŸã‚ãƒªãƒ³ã‚«ãŒé‡è¤‡ã¨ã¿ãªã™ã“ã¨ã¯ãªã„
 inline const Vec2 operator+(const Vec2& lhs, const Vec2& rhs) { return Vec2(lhs.GetX(), lhs.GetY()) += rhs; }
 inline const Vec2 operator+(const Vec2& lhs, const float rhs)   { return Vec2(lhs.GetX(), lhs.GetY()) += rhs; }
 inline const Vec2 operator+(const float lhs, const Vec2& rhs)   { return Vec2(lhs, lhs) += rhs; }
@@ -151,7 +149,7 @@ public:
 	Vec3(float num):x(num), y(num), z(num) {}
 
 /***********************************************************************************
-ƒQƒbƒ^[ƒZƒbƒ^[ƒAƒWƒƒƒXƒ^[
+ã‚²ãƒƒã‚¿ãƒ¼ã‚»ãƒƒã‚¿ãƒ¼ã‚¢ã‚¸ãƒ£ã‚¹ã‚¿ãƒ¼
 ***********************************************************************************/
 
 	float GetX() const { return x; }
@@ -170,7 +168,7 @@ public:
 	static Vec3 Forward() { return Vec3(0.0f, 0.0f, 1.0f); }
 
 /***********************************************************************************
-ŠÖ”
+é–¢æ•°
 ***********************************************************************************/
 
 	float Length() { return sqrtf(x * x + y * y + z * z); }
@@ -217,7 +215,7 @@ public:
 	
 
 /***********************************************************************************
-‰‰Zq(‘ã“ü‰‰Zq‚Íƒƒ“ƒo“à‚ÅÀ‘•‚µ,ƒƒ“ƒoŠO‚ÌZp‰‰Zq(“ñ€)‚Åg—p‚µƒR[ƒh‚Ìd•¡‚ğ”ğ‚¯‚é)
+æ¼”ç®—å­(ä»£å…¥æ¼”ç®—å­ã¯ãƒ¡ãƒ³ãƒå†…ã§å®Ÿè£…ã—,ãƒ¡ãƒ³ãƒå¤–ã®ç®—è¡“æ¼”ç®—å­(äºŒé …)ã§ä½¿ç”¨ã—ã‚³ãƒ¼ãƒ‰ã®é‡è¤‡ã‚’é¿ã‘ã‚‹)
 ***********************************************************************************/
 
 	inline Vec3& operator= (const Vec3& rhs)
@@ -276,7 +274,7 @@ public:
 private:
 	float x, y, z;
 };
-//‰‰Zq
+//æ¼”ç®—å­
 inline const Vec3 operator+(const Vec3& lhs, const Vec3& rhs) { return Vec3(lhs.GetX(), lhs.GetY(), lhs.GetZ()) += rhs; }
 inline const Vec3 operator+(const Vec3& lhs, const float rhs) { return Vec3(lhs.GetX(), lhs.GetY(), lhs.GetZ()) += rhs; }
 inline const Vec3 operator+(const float lhs, const Vec3& rhs) { return Vec3(lhs, lhs, lhs) += rhs; }
@@ -396,7 +394,7 @@ public:
 				}
 			}
 
-			//ˆø”num‚ğƒ‰ƒWƒAƒ“‚Æ‚µ‚Ä—p‚¢‚é
+			//å¼•æ•°numã‚’ãƒ©ã‚¸ã‚¢ãƒ³ã¨ã—ã¦ç”¨ã„ã‚‹
 			if (kind == MatKind::Rot_X)
 			{
 				elements[1][1] = cos(num);
@@ -423,7 +421,7 @@ public:
 	}
 
 /***********************************************************************************
-ƒQƒbƒ^[ƒZƒbƒ^[ƒAƒWƒƒƒXƒ^[
+ã‚²ãƒƒã‚¿ãƒ¼ã‚»ãƒƒã‚¿ãƒ¼ã‚¢ã‚¸ãƒ£ã‚¹ã‚¿ãƒ¼
 ***********************************************************************************/
 
 	const float* GetPtr() { return static_cast<const float*>(&elements[0][0]); }
@@ -432,13 +430,13 @@ public:
 	void  AdjustElement(int i, int j, float num) { elements[i][j] += num; }
 
 /***********************************************************************************
-ŠÖ”
+é–¢æ•°
 ***********************************************************************************/
 
 	static void PrintMat(const Mat4& mat)
 	{
-		std::cout << "(—ñ—Dæ)mat4 = \n";
-		std::cout << std::fixed; //•‚“®¬”“_‚ğŒÅ’è¬”“_•\‹L‚Å“üo—Íw¦
+		std::cout << "(åˆ—å„ªå…ˆ)mat4 = \n";
+		std::cout << std::fixed; //æµ®å‹•å°æ•°ç‚¹ã‚’å›ºå®šå°æ•°ç‚¹è¡¨è¨˜ã§å…¥å‡ºåŠ›æŒ‡ç¤º
 		for (int i = 0; i < 4;i++)
 		{
 			for (int j = 0;j < 4;j++)
@@ -450,20 +448,20 @@ public:
 		std::cout << std::defaultfloat;
 	}
 
-	/// <summary>ˆø”ƒxƒNƒgƒ‹‚ğŒ³‚Éƒrƒ…[s—ñ‚ğ•Ô‚·<para></para>
-	/// ˆø”‚Í’PˆÊƒxƒNƒgƒ‹‚Å‚È‚­‚Ä‚à‚æ‚¢</summary>
-	/// <param name="eye">ƒJƒƒ‰À•W</param>
-	/// <param name="target">’‹“_À•W</param>
-	/// <param name="worldUp">ƒ[ƒ‹ƒhÀ•WŒnã•ûŒü’PˆÊƒxƒNƒgƒ‹</param>
+	/// <summary>å¼•æ•°ãƒ™ã‚¯ãƒˆãƒ«ã‚’å…ƒã«ãƒ“ãƒ¥ãƒ¼è¡Œåˆ—ã‚’è¿”ã™<para></para>
+	/// å¼•æ•°ã¯å˜ä½ãƒ™ã‚¯ãƒˆãƒ«ã§ãªãã¦ã‚‚ã‚ˆã„</summary>
+	/// <param name="eye">ã‚«ãƒ¡ãƒ©åº§æ¨™</param>
+	/// <param name="target">æ³¨è¦–ç‚¹åº§æ¨™</param>
+	/// <param name="worldUp">ãƒ¯ãƒ¼ãƒ«ãƒ‰åº§æ¨™ç³»ä¸Šæ–¹å‘å˜ä½ãƒ™ã‚¯ãƒˆãƒ«</param>
 	static Mat4 View(const Vec3& eye, const Vec3& target, const Vec3& worldUp)
 	{
-	//’‹“_•ûŒü,ƒJƒƒ‰‰Eè•ûŒü,ƒJƒƒ‰ã•ûŒü‚Ì’PˆÊƒxƒNƒgƒ‹‚ğì¬
+	//æ³¨è¦–ç‚¹æ–¹å‘,ã‚«ãƒ¡ãƒ©å³æ‰‹æ–¹å‘,ã‚«ãƒ¡ãƒ©ä¸Šæ–¹å‘ã®å˜ä½ãƒ™ã‚¯ãƒˆãƒ«ã‚’ä½œæˆ
 		Vec3 tempZ = target - eye;
 		const Vec3 f = tempZ.Normalize(); //forward
 		const Vec3 r = Vec3::Cross(worldUp, f).Normalize(); //right
 		const Vec3 u = Vec3::Cross(f, r); //up
 		
-	//ƒrƒ…[s—ñ‚ÌŒvZ
+	//ãƒ“ãƒ¥ãƒ¼è¡Œåˆ—ã®è¨ˆç®—
 		Mat4 viewMat = Mat4(MatKind::Zero);
 		viewMat[0][0] = r.GetX();  viewMat[0][1] = r.GetY();  viewMat[0][2] = r.GetZ();  viewMat[0][3] = Vec3::Dot(r, eye);
 		viewMat[1][0] = u.GetX();  viewMat[1][1] = u.GetY();  viewMat[1][2] = u.GetZ();  viewMat[1][3] = Vec3::Dot(u, eye);
@@ -488,13 +486,13 @@ public:
 	}
 
 /***********************************************************************************
-‰‰Zq
+æ¼”ç®—å­
 ***********************************************************************************/
 
-	//constƒIƒuƒWƒFƒNƒg—p(“Ç‚İæ‚èê—p)
+	//constã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆç”¨(èª­ã¿å–ã‚Šå°‚ç”¨)
 	const std::array<float, 4>& operator[](int index) const { return elements[index]; }
 
-	//”ñconstƒIƒuƒWƒFƒNƒgŒü‚¯(“Ç‚İ‘‚«‰Â”\)
+	//éconstã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆå‘ã‘(èª­ã¿æ›¸ãå¯èƒ½)
 	std::array<float, 4>& operator[](int index) { return elements[index]; }	
 
 	inline Mat4 operator*(const Mat4& rhs) const
